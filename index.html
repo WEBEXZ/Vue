@@ -12,7 +12,7 @@
   <h1>{{ titulo }}</h1>
   Nueva Actividad: <input type="text" v-model="nuevaActividad" placeholder="Introduce Actividad">
   <input type="submit" value="Agregar" @click="guardarActividad(nuevaActividad)">
-  <ul v-for="actividad in actividades">
+  <ul v-for="actividad in actividades | orderBy 'nombre' 1">
     <li>{{actividad.nombre}}<input type="submit" value="Eliminar" @click="eliminarActividad(actividad)"></li>
   </ul>
 </body>
