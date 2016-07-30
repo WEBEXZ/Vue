@@ -10,8 +10,12 @@ new Vue({
   },
   methods: {
     guardarActividad: function(actividad) {
-      this.actividades.push({nombre: actividad});
-      this.nuevaActividad = "";
+      if(actividad.trim()) {
+        this.nuevaActividad = "";
+        this.actividades.push({nombre: actividad});
+      }else {
+        alert("Introducir Texto!!");
+      }
     }
   }
 })
