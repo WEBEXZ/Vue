@@ -13,7 +13,7 @@
   Nueva Actividad: <input type="text" v-model="nuevaActividad" placeholder="Introduce Actividad">
   <input type="submit" value="Agregar" @click="guardarActividad(nuevaActividad)">
   <ul v-for="actividad in actividades">
-    <li>{{actividad.nombre}}</li>
+    <li>{{actividad.nombre}}<input type="submit" value="Eliminar" @click="eliminarActividad(actividad)"></li>
   </ul>
 </body>
 </html>

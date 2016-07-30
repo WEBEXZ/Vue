@@ -16,6 +16,11 @@ new Vue({
       }else {
         alert("Introducir Texto!!");
       }
+    },
+    eliminarActividad: function(actividad) {
+      if(confirm("¿Seguro de eliminar " + actividad.nombre + "?")) {
+        this.actividades.$remove(actividad);
+      }
     }
   }
 })
